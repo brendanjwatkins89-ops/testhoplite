@@ -1,0 +1,19 @@
+{
+  "name": "aquarium-3d",
+  "version": "1.0.0",
+  "private": true,
+  "description": "3D-модель аквариума (GLB) с генератором и веб-просмотрщиком",
+  "type": "module",
+  "scripts": {
+    "dev": "vite",
+    "build": "vite build",
+    "preview": "vite preview",
+    "model": "node scripts/export-glb.mjs"
+  },
+  "dependencies": {
+    "three": "^0.180.0"
+  },
+  "devDependencies": {
+    "vite": "^7.1.0"
+  }
+}

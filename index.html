@@ -1,0 +1,61 @@
+<!doctype html>
+<html lang="ru">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>3D-модель аквариума</title>
+    <style>
+      html,
+      body {
+        margin: 0;
+        height: 100%;
+      }
+      body {
+        overflow: hidden;
+        background: radial-gradient(ellipse at 50% 35%, #2c4a55 0%, #14222b 55%, #0a1218 100%);
+        color: #e6f2f2;
+        font: 14px/1.4 system-ui, sans-serif;
+      }
+      #view {
+        position: fixed;
+        inset: 0;
+      }
+      .hud {
+        position: fixed;
+        left: 16px;
+        bottom: 16px;
+        display: flex;
+        gap: 10px;
+        align-items: center;
+        flex-wrap: wrap;
+      }
+      .hud span {
+        opacity: 0.7;
+      }
+      .hud button,
+      .hud a {
+        font: inherit;
+        color: inherit;
+        text-decoration: none;
+        padding: 6px 12px;
+        border: 1px solid rgb(255 255 255 / 0.25);
+        border-radius: 6px;
+        background: rgb(255 255 255 / 0.08);
+        cursor: pointer;
+      }
+      .hud button:hover,
+      .hud a:hover {
+        background: rgb(255 255 255 / 0.16);
+      }
+    </style>
+  </head>
+  <body>
+    <div id="view"></div>
+    <div class="hud">
+      <button id="toggle" type="button">Пауза</button>
+      <a id="download" download="aquarium.glb">Скачать .glb</a>
+      <span>Вращение — мышью, масштаб — колесом</span>
+    </div>
+    <script type="module" src="/src/main.js"></script>
+  </body>
+</html>
